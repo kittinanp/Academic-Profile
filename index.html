@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personal Academic Website | Kittinan</title>
+  <meta name="Kittinan" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Academic profile, publications, and research projects of Kittinan." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== Navigation Bar ===== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">
+        <!-- แก้เป็นชื่อจริง -->
+        <a href="#home">Kittinanp</a>
+      </div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#downloads">Downloads</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero / Home Section ===== -->
+  <section id="home" class="section hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <p class="hero-label">Academic Profile</p>
+        <!-- แก้ชื่อและตำแหน่ง -->
+        <h1>Kittinan Persri</h1>
+        <p class="hero-subtitle">
+          Faculty of Technical Education, King Mongkut's University of Technology North Bangkok (KMUTNB)<br />
+          Research Interests: Deep Learning, Autonomous Driving, Management system development, EDMS, Smart Classroom
+        </p>
+
+        <div class="hero-actions">
+          <!-- เปลี่ยนลิงก์ file CV ทีหลังได้ -->
+          <a href="#publications" class="btn primary">View Publications</a>
+          <a href="#downloads" class="btn outline">Download CV</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+           <img src="img/kittinan.jpg" alt="Your Profile Photo" class="profile-avatar-img">
+                <p class="hero-note">
+           Replace this placeholder with your profile photo (e.g. <code>img/kittinan.jpg</code>)
+        </p>
+       </div>
+    </div>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="two-column">
+        <div>
+          <p>
+            สวัสดีครับ ผมเป็นวิศวกรประจำคณะครุศาสตร์อุตสาหกรรม มจพ.
+            ทำวิจัยด้านปัญญาประดิษฐ์ การเรียนรู้เชิงลึก (Deep Learning) ระบบอัตโนมัติ และระบบบริหารจัดการ
+            โดยเน้นการประยุกต์ใช้กับระบบอัตโนมัติ ,
+            Smart Classroom และ Green Office / SDGs
+          </p>
+          <p>
+            My current research focuses on developing and evaluating autonomous driving models
+            (Keras Linear, Keras Categorical, Keras CNN 3D), microservices-based EDMS, and
+            educational technology that aligns with Sustainable Development Goals (SDGs).
+          </p>
+        </div>
+        <div>
+          <h3 class="sub-title">Education</h3>
+          <ul class="list">
+            <!-- <li>Ph.D. in <em>…</em>, University / Country, Year</li> -->
+            <li>M.Eng. in <em>Applicd Electrical Engineering Technology</em>, King Mongkut's University of Technology North Bangkok / Country, Year</li>
+            <li>B.I.Ed. in <em>Electrical Engineering</em>, King Mongkut's University of Technology North Bangkok / Country, Year</li>
+          </ul>
+
+          <h3 class="sub-title">Positions</h3>
+          <ul class="list">
+            <li>Engineering, Department Office of the Dean, FTE, KMUTNB</li>
+            <li>Committee Member, THE Impact Rankings Data Management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Research Interests ===== -->
+  <section id="research" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Research Interests</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Deep Learning & Autonomous Driving</h3>
+          <p>
+            Development and evaluation of Keras Linear, Categorical, and CNN 3D models
+            for autonomous vehicle control using real-world track data.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Microservices & EDMS</h3>
+          <p>
+            Design of microservices-based electronic document management systems (EDMS) for
+            faculties, supporting RESTful APIs, logging, caching, and notification services.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Smart Classroom & SDGs</h3>
+          <p>
+            Smart learning environments, digital transformation in education, and systems
+            that support Green Office practices and SDG-focused reporting.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Publications ===== -->
+  <section id="publications" class="section">
+    <div class="container">
+      <h2 class="section-title">Publications</h2>
+
+      <h3 class="sub-title">Journal Articles</h3>
+      <ul class="pub-list">
+        <li>
+          <span class="pub-year">2025</span>
+          <div class="pub-content">
+            <div class="pub-title">
+              Performance Comparison of Autonomous Driving Algorithms Using Deep Learning
+            </div>
+            <div class="pub-meta">
+              Journal Name, Vol(X), No(Y), pp. 1–15.
+            </div>
+            <div class="pub-links">
+              <!-- แก้ลิงก์ PDF / DOI ตามจริง -->
+              <a href="#" target="_blank">PDF</a>
+              <a href="#" target="_blank">DOI</a>
+              <a href="#" target="_blank">BibTeX</a>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <span class="pub-year">2024</span>
+          <div class="pub-content">
+            <div class="pub-title">
+              Design of Microservices-based Electronic Document Management System for Higher Education
+            </div>
+            <div class="pub-meta">
+              International Journal of …, Vol(A), No(B), pp. 100–120.
+            </div>
+            <div class="pub-links">
+              <a href="#" target="_blank">PDF</a>
+              <a href="#" target="_blank">DOI</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <h3 class="sub-title">Conference Papers</h3>
+      <ul class="pub-list">
+        <li>
+          <span class="pub-year">2023</span>
+          <div class="pub-content">
+            <div class="pub-title">
+              Autonomous RC Car Platform for Deep Learning-based Steering Control
+            </div>
+            <div class="pub-meta">
+              Proceedings of … Conference, City, Country.
+            </div>
+            <div class="pub-links">
+              <a href="#" target="_blank">PDF</a>
+              <a href="#" target="_blank">Slides</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Projects / Portfolio ===== -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Autonomous Driving with Keras CNN 3D</h3>
+          <p>
+            Development of a 3D CNN model that processes image sequences to predict steering
+            angles for an autonomous RC car platform using Raspberry Pi and camera sensors.
+          </p>
+          <p class="card-meta">
+            Tags: Keras, CNN 3D, TensorFlow, Raspberry Pi
+          </p>
+          <a href="#" class="card-link">View details / code</a>
+        </article>
+
+        <article class="card">
+          <h3>EDMS with Microservices Architecture</h3>
+          <p>
+            Electronic Document Management System for the faculty, including request,
+            approval, document storage, logging, and notification services via REST APIs.
+          </p>
+          <p class="card-meta">
+            Tags: Microservices, REST API, Logging, SDGs
+          </p>
+          <a href="#" class="card-link">System architecture</a>
+        </article>
+
+        <article class="card">
+          <h3>Smart Classroom & Green Office</h3>
+          <p>
+            Smart classroom ecosystem integrating classroom booking, energy monitoring, and
+            paperless workflows aligned with Green Office and SDG goals.
+          </p>
+          <p class="card-meta">
+            Tags: Smart Classroom, IoT, Green Office
+          </p>
+          <a href="#" class="card-link">Project summary</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Downloads ===== -->
+  <section id="downloads" class="section">
+    <div class="container">
+      <h2 class="section-title">Downloads</h2>
+      <ul class="download-list">
+        <!-- แก้ href ให้ชี้ไปยังไฟล์จริงภายหลัง -->
+        <li>
+          <span>Curriculum Vitae (CV)</span>
+          <a href="#" download>Download</a>
+        </li>
+        <li>
+          <span>Full Journal Article (PDF)</span>
+          <a href="#" target="_blank">Open</a>
+        </li>
+        <li>
+          <span>Conference Presentation Slides</span>
+          <a href="#" target="_blank">Open</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="two-column">
+        <div>
+          <p>
+            หากต้องการติดต่อเรื่องความร่วมมือวิจัย การสอน หรือการบรรยาย สามารถติดต่อได้ที่:
+          </p>
+          <ul class="list">
+            <li><strong>Email:</strong> kittinan.p@fte.kmutnb.ac.th</li>
+            <li><strong>Office:</strong> Faculty of Technical Education, KMUTNB</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="sub-title">Academic Profiles</h3>
+          <ul class="list">
+            <li><a href="#" target="_blank">Google Scholar</a></li>
+            <li><a href="#" target="_blank">ORCID</a></li>
+            <li><a href="#" target="_blank">ResearchGate</a></li>
+            <li><a href="#" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>© <span id="year"></span> Kittinan. All rights reserved.</p>
+      <p class="footer-note">Personal academic website for publications and research portfolio.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ใส่ปีอัตโนมัติใน footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
