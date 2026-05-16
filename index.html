@@ -1,292 +1,700 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Personal Academic Website | Kittinan</title>
-  <meta name="Kittinan" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Academic profile, publications, and research projects of Kittinan." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kittinan Petsri · Academic Portfolio</title>
+  <meta name="description" content="Academic profile, publications, and research of Kittinan Petsri — Faculty of Technical Education, KMUTNB. Research interests: Deep Learning, Autonomous Driving, EDMS, Smart Classroom, Green Office/SDGs." />
+  <meta name="author" content="Kittinan Petsri" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kittinan Petsri · Academic Portfolio" />
+  <meta property="og:description" content="Researcher in Deep Learning & Smart Education Systems" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Sarabun:wght@400;600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ===== Navigation Bar ===== -->
+
+  <!-- ===== Animated Background ===== -->
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- ===== Navigation ===== -->
   <header class="site-header">
     <div class="container nav-container">
-      <div class="logo">
-        <!-- แก้เป็นชื่อจริง -->
-        <a href="#home">Kittinanp</a>
-      </div>
-      <nav class="nav">
-        <a href="#home">Home</a>
+      <a href="#home" class="logo">
+        <span class="logo-mark">KP</span>
+        <span class="logo-text">Kittinan Petsri</span>
+      </a>
+      <nav class="nav" id="primary-nav">
         <a href="#about">About</a>
+        <a href="#timeline">Journey</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#projects">Projects</a>
-        <a href="#downloads">Downloads</a>
+        <a href="#skills">Skills</a>
+        <a href="#awards">Awards</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <!-- ===== Hero / Home Section ===== -->
-  <section id="home" class="section hero">
-    <div class="container hero-content">
+  <!-- ===== Hero ===== -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
       <div class="hero-text">
-        <p class="hero-label">Academic Profile</p>
-        <!-- แก้ชื่อและตำแหน่ง -->
-        <h1>Kittinan Persri</h1>
-        <p class="hero-subtitle">
-          Faculty of Technical Education, King Mongkut's University of Technology North Bangkok (KMUTNB)<br />
-          Research Interests: Deep Learning, Autonomous Driving, Management system development, EDMS, Smart Classroom
+        <span class="badge"><span class="dot"></span> Available for research collaboration</span>
+        <h1>
+          Hi, I'm <span class="grad-text">Kittinan Petsri</span>
+        </h1>
+        <p class="hero-sub">
+          Researcher in <strong>Deep Learning</strong> &amp; <strong>Smart Education Systems</strong> at the Faculty of Technical Education,
+          King Mongkut's University of Technology North Bangkok.
         </p>
-
+        <p class="hero-meta">
+          Engineer · Project Manager · Lifelong Tinkerer
+        </p>
         <div class="hero-actions">
-          <!-- เปลี่ยนลิงก์ file CV ทีหลังได้ -->
-          <a href="#publications" class="btn primary">View Publications</a>
-          <a href="#downloads" class="btn outline">Download CV</a>
+          <a href="#publications" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            View Publications
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            Get in touch
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-count="4">0</span>
+            <span class="stat-label">Publications</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="10">0</span>
+            <span class="stat-label">Years Engineering</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="3">0</span>
+            <span class="stat-label">Funded Projects</span>
+          </div>
         </div>
       </div>
 
-      <div class="hero-photo">
-           <img src="img/kittinan.jpg" alt="Your Profile Photo" class="profile-avatar-img">
-       </div>
+      <!-- Decorative profile card -->
+      <div class="hero-card">
+        <div class="profile-wrap">
+          <div class="profile-ring"></div>
+          <div class="profile-avatar">
+            <img src="img/kittinan.jpg" alt="Kittinan Petsri">
+          </div>
+        </div>
+        <div class="profile-tags">
+          <span class="tag tag-cyan">Deep Learning</span>
+          <span class="tag tag-violet">EDMS</span>
+          <span class="tag tag-amber">Smart Classroom</span>
+          <span class="tag tag-emerald">SDGs</span>
+        </div>
+        <div class="profile-affil">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M9 12h.01M9 15h.01M9 18h.01M15 9h.01M15 12h.01M15 15h.01M15 18h.01"/></svg>
+          Faculty of Technical Education, KMUTNB
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#about" class="scroll-down" aria-label="Scroll to next section">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+    </a>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">01 — About</span>
+        <h2>Engineering with Purpose</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="lead">
+            I work at the intersection of <strong>industrial automation</strong>, <strong>artificial intelligence</strong>,
+            and <strong>educational technology</strong> — building systems that reduce manual workload,
+            lower energy consumption, and make institutions more sustainable.
+          </p>
+          <p>
+            My focus is on applying deep learning to real-world hardware (autonomous vehicles,
+            building controllers, vending systems) and designing microservices-based platforms
+            that help universities operate as Green Offices aligned with the UN SDGs.
+          </p>
+          <p class="th">
+            สนใจงานด้านการบริหารจัดการภายในอาคารและอุตสาหกรรม ระบบอัตโนมัติ
+            การพัฒนาเพิ่มความสามารถของอุปกรณ์เครื่องจักร และการประยุกต์ใช้เทคโนโลยี
+            เพื่อลดเวลา ลดภาระงาน และแก้ปัญหาในงานจริง
+          </p>
+        </div>
+
+        <aside class="about-side">
+          <h3>Education</h3>
+          <ul class="mini-list">
+            <li>
+              <span class="mini-year">2021–2022</span>
+              <div>
+                <strong>M.Eng.</strong> in Applied Electrical Engineering Technology
+                <span class="mini-sub">King Mongkut's University of Technology North Bangkok</span>
+              </div>
+            </li>
+            <li>
+              <span class="mini-year">2012–2015</span>
+              <div>
+                <strong>B.Ind.Tech.</strong> in Electrical Engineering
+                <span class="mini-sub">King Mongkut's University of Technology North Bangkok</span>
+              </div>
+            </li>
+          </ul>
+
+          <h3>Current Role</h3>
+          <ul class="mini-list">
+            <li>
+              <span class="mini-year">Now</span>
+              <div>
+                <strong>Head of Engineering</strong>
+                <span class="mini-sub">Office of the Dean, FTE, KMUTNB</span>
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </div>
     </div>
   </section>
 
-  <!-- ===== About Section ===== -->
-  <section id="about" class="section">
+  <!-- ===== Timeline ===== -->
+  <section id="timeline" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="two-column">
-        <div>
-          <p>
-            สวัสดีครับ ผมเป็นวิศวกรประจำคณะครุศาสตร์อุตสาหกรรม มจพ.
-            ทำวิจัยด้านปัญญาประดิษฐ์ การเรียนรู้เชิงลึก (Deep Learning) ระบบอัตโนมัติ และระบบบริหารจัดการ
-            โดยเน้นการประยุกต์ใช้กับระบบอัตโนมัติ ,
-            Smart Classroom และ Green Office / SDGs
-          </p>
-          <p>
-            My current research focuses on developing and evaluating autonomous driving models
-            (Keras Linear, Keras Categorical, Keras CNN 3D), microservices-based EDMS, and
-            educational technology that aligns with Sustainable Development Goals (SDGs).
-          </p>
-        </div>
-        <div>
-          <h3 class="sub-title">Education</h3>
-          <ul class="list">
-            <!-- <li>Ph.D. in <em>…</em>, University / Country, Year</li> -->
-            <li>M.Eng. in <em>Applicd Electrical Engineering Technology</em>, King Mongkut's University of Technology North Bangkok / Country, Year</li>
-            <li>B.I.Ed. in <em>Electrical Engineering</em>, King Mongkut's University of Technology North Bangkok / Country, Year</li>
-          </ul>
-
-          <h3 class="sub-title">Positions</h3>
-          <ul class="list">
-            <li>Engineering, Department Office of the Dean, FTE, KMUTNB</li>
-            <li>Committee Member, THE Impact Rankings Data Management</li>
-          </ul>
-        </div>
+      <div class="section-head">
+        <span class="eyebrow">02 — Journey</span>
+        <h2>Career Timeline</h2>
+        <p class="section-desc">A decade of building, fixing, and researching across academia and industry.</p>
       </div>
+
+      <ol class="timeline">
+        <li class="t-item">
+          <div class="t-marker"></div>
+          <div class="t-content">
+            <span class="t-year">2023 — Present</span>
+            <h3>Head of Engineering</h3>
+            <p class="t-org">Office of the Dean, Faculty of Technical Education, KMUTNB</p>
+            <p>Oversees facility management, procurement budget, and energy &amp; environmental indicators for the faculty.</p>
+          </div>
+        </li>
+        <li class="t-item">
+          <div class="t-marker"></div>
+          <div class="t-content">
+            <span class="t-year">2015 — Present</span>
+            <h3>Consultant / Project Manager</h3>
+            <p class="t-org">Independent · Personal Practice</p>
+            <p>Helps industrial clients cut cost, time, and headcount through custom machinery, automation, and innovation.</p>
+          </div>
+        </li>
+        <li class="t-item">
+          <div class="t-marker"></div>
+          <div class="t-content">
+            <span class="t-year">2017</span>
+            <h3>Engineer</h3>
+            <p class="t-org">Office of the Dean, FTE, KMUTNB</p>
+            <p>Building repair and preventive maintenance across faculty facilities.</p>
+          </div>
+        </li>
+        <li class="t-item">
+          <div class="t-marker"></div>
+          <div class="t-content">
+            <span class="t-year">2016</span>
+            <h3>R&amp;D Engineer</h3>
+            <p class="t-org">Vending Machine Manufacturer</p>
+            <p>Developed and commissioned machines and embedded control systems for automatic vending products.</p>
+          </div>
+        </li>
+        <li class="t-item">
+          <div class="t-marker"></div>
+          <div class="t-content">
+            <span class="t-year">2015</span>
+            <h3>PQM Engineer</h3>
+            <p class="t-org">Thai Environment Systems Co., Ltd.</p>
+            <p>Operated medical-waste incineration systems for hospitals, monitoring water, smoke, and ash parameters.</p>
+          </div>
+        </li>
+        <li class="t-item">
+          <div class="t-marker"></div>
+          <div class="t-content">
+            <span class="t-year">2012 — 2015</span>
+            <h3>Supervisor / Technician</h3>
+            <p class="t-org">Independent · Personal Practice</p>
+            <p>Designed and installed electrical and control systems for homes, buildings, and factories.</p>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 
   <!-- ===== Research Interests ===== -->
-  <section id="research" class="section section-alt">
+  <section id="research" class="section">
     <div class="container">
-      <h2 class="section-title">Research Interests</h2>
+      <div class="section-head">
+        <span class="eyebrow">03 — Research</span>
+        <h2>What I'm Working On</h2>
+      </div>
+
       <div class="card-grid">
-        <article class="card">
-          <h3>Deep Learning & Autonomous Driving</h3>
-          <p>
-            Development and evaluation of Keras Linear, Categorical, and CNN 3D models
-            for autonomous vehicle control using real-world track data.
-          </p>
+        <article class="card card-cyan">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </div>
+          <h3>Deep Learning &amp; Autonomous Driving</h3>
+          <p>Comparing Keras Linear, Categorical, and CNN-3D models on RC-car platforms to find the best architecture for real-world steering and obstacle avoidance.</p>
         </article>
-        <article class="card">
-          <h3>Microservices & EDMS</h3>
-          <p>
-            Design of microservices-based electronic document management systems (EDMS) for
-            faculties, supporting RESTful APIs, logging, caching, and notification services.
-          </p>
+
+        <article class="card card-violet">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3>Microservices EDMS</h3>
+          <p>Designing electronic document management systems for higher-education faculties using REST APIs, logging, caching, and notification services.</p>
         </article>
-        <article class="card">
-          <h3>Smart Classroom & SDGs</h3>
-          <p>
-            Smart learning environments, digital transformation in education, and systems
-            that support Green Office practices and SDG-focused reporting.
-          </p>
+
+        <article class="card card-amber">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 22h20M4 22V10l8-7 8 7v12M9 22V12h6v10"/></svg>
+          </div>
+          <h3>Smart Classroom &amp; SDGs</h3>
+          <p>Building smart classroom ecosystems — booking, energy monitoring, paperless workflows — aligned with Green Office and SDG reporting.</p>
+        </article>
+
+        <article class="card card-emerald">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Data Visualization for Education</h3>
+          <p>Visualization concepts for supervision systems supporting pre-service engineering teachers, in collaboration with FTE researchers.</p>
         </article>
       </div>
     </div>
   </section>
 
   <!-- ===== Publications ===== -->
-  <section id="publications" class="section">
+  <section id="publications" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Publications</h2>
+      <div class="section-head">
+        <span class="eyebrow">04 — Publications</span>
+        <h2>Selected Papers</h2>
+        <p class="section-desc">A growing list of peer-reviewed work in AI, automation, and educational technology.</p>
+      </div>
 
-      <h3 class="sub-title">Journal Articles</h3>
-      <ul class="pub-list">
-        <li>
-          <span class="pub-year">2025</span>
-          <div class="pub-content">
-            <div class="pub-title">
-              Performance Comparison of Autonomous Driving Algorithms Using Deep Learning
+      <div class="pub-group">
+        <h3 class="pub-h">Conference Papers</h3>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <span class="pub-year">2026</span>
+            <div class="pub-body">
+              <div class="pub-title">A Study on the Use of Web Applications with Microservices Architecture to Enhance Sustainability in Electronic Document Management Systems within Educational Institutions</div>
+              <div class="pub-authors">Kanitta Hinon, <u>Kittinan Petsri</u>, Wittawat Chantamoolla</div>
+              <div class="pub-tags">
+                <span class="chip">Microservices</span><span class="chip">EDMS</span><span class="chip">Sustainability</span>
+              </div>
             </div>
-            <div class="pub-meta">
-              Journal Name, Vol(X), No(Y), pp. 1–15.
-            </div>
-            <div class="pub-links">
-              <!-- แก้ลิงก์ PDF / DOI ตามจริง -->
-              <a href="#" target="_blank">PDF</a>
-              <a href="#" target="_blank">DOI</a>
-              <a href="#" target="_blank">BibTeX</a>
-            </div>
-          </div>
-        </li>
+          </li>
 
-        <li>
-          <span class="pub-year">2024</span>
-          <div class="pub-content">
-            <div class="pub-title">
-              Design of Microservices-based Electronic Document Management System for Higher Education
+          <li class="pub-item">
+            <span class="pub-year">2025</span>
+            <div class="pub-body">
+              <div class="pub-title">Design and Modeling of Autonomous Vehicles Using Deep Learning</div>
+              <div class="pub-authors"><u>Kittinan Petsri</u>, Korawit Krajapan</div>
+              <div class="pub-tags">
+                <span class="chip">Deep Learning</span><span class="chip">Autonomous Vehicles</span><span class="chip">CNN</span>
+              </div>
             </div>
-            <div class="pub-meta">
-              International Journal of …, Vol(A), No(B), pp. 100–120.
-            </div>
-            <div class="pub-links">
-              <a href="#" target="_blank">PDF</a>
-              <a href="#" target="_blank">DOI</a>
-            </div>
-          </div>
-        </li>
-      </ul>
+          </li>
 
-      <h3 class="sub-title">Conference Papers</h3>
-      <ul class="pub-list">
-        <li>
-          <span class="pub-year">2023</span>
-          <div class="pub-content">
-            <div class="pub-title">
-              Autonomous RC Car Platform for Deep Learning-based Steering Control
+          <li class="pub-item">
+            <span class="pub-year">2024</span>
+            <div class="pub-body">
+              <div class="pub-title">Design Concept of Data Visualization in Developing a Supervision System for Pre-Service Engineering Teachers</div>
+              <div class="pub-authors">Kanitta Hinon, Phuchit Satitpong, <u>Kittinan Petsri</u></div>
+              <div class="pub-tags">
+                <span class="chip">Data Viz</span><span class="chip">Education</span>
+              </div>
+              <div class="pub-badge"><span class="ribbon">Outstanding Paper Award</span></div>
             </div>
-            <div class="pub-meta">
-              Proceedings of … Conference, City, Country.
+          </li>
+        </ul>
+      </div>
+
+      <div class="pub-group">
+        <h3 class="pub-h">Patents</h3>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <span class="pub-year">2024</span>
+            <div class="pub-body">
+              <div class="pub-title">Microservices-based Electronic Document Management System (EDMS)</div>
+              <div class="pub-authors">Patent application — KMUTNB</div>
+              <div class="pub-tags">
+                <span class="chip">Patent</span><span class="chip">EDMS</span>
+              </div>
             </div>
-            <div class="pub-links">
-              <a href="#" target="_blank">PDF</a>
-              <a href="#" target="_blank">Slides</a>
-            </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="profile-links">
+        <a href="https://scholar.google.com/citations?view_op=list_works&hl=th&user=2wEVpBUAAAAJ" target="_blank" rel="noopener" class="prof-link">
+          <span class="prof-icon">GS</span> Google Scholar
+        </a>
+        <a href="https://orcid.org/0009-0004-7938-1447" target="_blank" rel="noopener" class="prof-link">
+          <span class="prof-icon">iD</span> ORCID
+        </a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=60021685900" target="_blank" rel="noopener" class="prof-link">
+          <span class="prof-icon">Sc</span> Scopus
+        </a>
+        <a href="https://research.kmutnb.ac.th/manage/researcher/?data=eyJjbWQiOiJzaG93X2luZm8iLCJyZXNfaWQiOjY0ODJ9" target="_blank" rel="noopener" class="prof-link">
+          <span class="prof-icon">R</span> KMUTNB Research
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- ===== Projects / Portfolio ===== -->
-  <section id="projects" class="section section-alt">
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="section">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Autonomous Driving with Keras CNN 3D</h3>
-          <p>
-            Development of a 3D CNN model that processes image sequences to predict steering
-            angles for an autonomous RC car platform using Raspberry Pi and camera sensors.
-          </p>
-          <p class="card-meta">
-            Tags: Keras, CNN 3D, TensorFlow, Raspberry Pi
-          </p>
-          <a href="#" class="card-link">View details / code</a>
+      <div class="section-head">
+        <span class="eyebrow">05 — Projects</span>
+        <h2>Selected Projects</h2>
+      </div>
+
+      <div class="proj-grid">
+        <article class="proj">
+          <div class="proj-art proj-art-1">
+            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="pg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#06b6d4"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+              </defs>
+              <rect width="200" height="120" fill="url(#pg1)" opacity="0.15"/>
+              <g stroke="#06b6d4" stroke-width="1.5" fill="none" opacity="0.7">
+                <path d="M20 100 Q60 40 100 70 T180 50"/>
+                <circle cx="40" cy="80" r="3" fill="#06b6d4"/>
+                <circle cx="100" cy="70" r="3" fill="#3b82f6"/>
+                <circle cx="160" cy="55" r="3" fill="#8b5cf6"/>
+              </g>
+              <text x="100" y="115" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#06b6d4">model.fit(X, y)</text>
+            </svg>
+          </div>
+          <div class="proj-body">
+            <h3>Autonomous Driving with Deep Learning</h3>
+            <p>Developed an RC-car platform — both hardware and software — and benchmarked multiple deep-learning models for self-driving and obstacle avoidance on a defined track.</p>
+            <div class="proj-tags">
+              <span class="chip">Deep Learning</span><span class="chip">CNN</span><span class="chip">Keras</span><span class="chip">TensorFlow</span><span class="chip">Raspberry Pi</span>
+            </div>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>EDMS with Microservices Architecture</h3>
-          <p>
-            Electronic Document Management System for the faculty, including request,
-            approval, document storage, logging, and notification services via REST APIs.
-          </p>
-          <p class="card-meta">
-            Tags: Microservices, REST API, Logging, SDGs
-          </p>
-          <a href="#" class="card-link">System architecture</a>
+        <article class="proj">
+          <div class="proj-art proj-art-2">
+            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="pg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#ef4444"/></linearGradient>
+              </defs>
+              <rect width="200" height="120" fill="url(#pg2)" opacity="0.15"/>
+              <g fill="none" stroke="#f59e0b" stroke-width="1.5">
+                <rect x="30" y="30" width="40" height="60" rx="4"/>
+                <rect x="80" y="20" width="40" height="80" rx="4"/>
+                <rect x="130" y="40" width="40" height="50" rx="4"/>
+                <path d="M40 70 L 90 50 L 140 60" stroke="#ef4444"/>
+              </g>
+              <text x="100" y="115" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#f59e0b">energy.monitor()</text>
+            </svg>
+          </div>
+          <div class="proj-body">
+            <h3>Electrical Energy Controller for Buildings</h3>
+            <p>Funded research project (2019) developing a building-energy controller to monitor and reduce electricity consumption across academic buildings.</p>
+            <div class="proj-tags">
+              <span class="chip">IoT</span><span class="chip">Energy</span><span class="chip">Embedded</span>
+            </div>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Smart Classroom & Green Office</h3>
-          <p>
-            Smart classroom ecosystem integrating classroom booking, energy monitoring, and
-            paperless workflows aligned with Green Office and SDG goals.
-          </p>
-          <p class="card-meta">
-            Tags: Smart Classroom, IoT, Green Office
-          </p>
-          <a href="#" class="card-link">Project summary</a>
+        <article class="proj">
+          <div class="proj-art proj-art-3">
+            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="pg3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+              </defs>
+              <rect width="200" height="120" fill="url(#pg3)" opacity="0.15"/>
+              <g fill="none" stroke="#10b981" stroke-width="1.5">
+                <rect x="20" y="30" width="50" height="35" rx="4"/>
+                <rect x="80" y="30" width="50" height="35" rx="4"/>
+                <rect x="140" y="30" width="40" height="35" rx="4"/>
+                <path d="M70 47 L 80 47 M 130 47 L 140 47" />
+                <circle cx="45" cy="85" r="6"/>
+                <circle cx="105" cy="85" r="6"/>
+                <circle cx="160" cy="85" r="6"/>
+              </g>
+              <text x="100" y="115" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#10b981">api/booking</text>
+            </svg>
+          </div>
+          <div class="proj-body">
+            <h3>EDMS One-Stop Service — Classroom &amp; Green Office</h3>
+            <p>Faculty-funded project building an electronic document management system that handles classroom and meeting-room bookings, aligned with Green Office practices.</p>
+            <div class="proj-tags">
+              <span class="chip">EDMS</span><span class="chip">Microservices</span><span class="chip">SDGs</span><span class="chip">Green Office</span>
+            </div>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ===== Downloads ===== -->
-  <section id="downloads" class="section">
+  <!-- ===== Skills ===== -->
+  <section id="skills" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Downloads</h2>
-      <ul class="download-list">
-        <!-- แก้ href ให้ชี้ไปยังไฟล์จริงภายหลัง -->
-        <li>
-          <span>Curriculum Vitae (CV)</span>
-          <a href="#" download>Download</a>
-        </li>
-        <li>
-          <span>Full Journal Article (PDF)</span>
-          <a href="#" target="_blank">Open</a>
-        </li>
-        <li>
-          <span>Conference Presentation Slides</span>
-          <a href="#" target="_blank">Open</a>
-        </li>
-      </ul>
+      <div class="section-head">
+        <span class="eyebrow">06 — Skills</span>
+        <h2>Tools &amp; Expertise</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-col">
+          <h3 class="skill-cat">Programming &amp; AI</h3>
+          <div class="skill"><div class="skill-row"><span>Python</span><span>90%</span></div><div class="bar"><i data-fill="90"></i></div></div>
+          <div class="skill"><div class="skill-row"><span>TensorFlow / Keras</span><span>80%</span></div><div class="bar"><i data-fill="80"></i></div></div>
+          <div class="skill"><div class="skill-row"><span>Deep Learning (CNN)</span><span>78%</span></div><div class="bar"><i data-fill="78"></i></div></div>
+        </div>
+        <div class="skill-col">
+          <h3 class="skill-cat">Engineering</h3>
+          <div class="skill"><div class="skill-row"><span>Electrical Systems</span><span>92%</span></div><div class="bar"><i data-fill="92"></i></div></div>
+          <div class="skill"><div class="skill-row"><span>Industrial Automation</span><span>85%</span></div><div class="bar"><i data-fill="85"></i></div></div>
+          <div class="skill"><div class="skill-row"><span>Embedded / Raspberry Pi</span><span>80%</span></div><div class="bar"><i data-fill="80"></i></div></div>
+        </div>
+        <div class="skill-col">
+          <h3 class="skill-cat">Systems &amp; Web</h3>
+          <div class="skill"><div class="skill-row"><span>Microservices &amp; REST APIs</span><span>78%</span></div><div class="bar"><i data-fill="78"></i></div></div>
+          <div class="skill"><div class="skill-row"><span>Web Application Dev</span><span>72%</span></div><div class="bar"><i data-fill="72"></i></div></div>
+          <div class="skill"><div class="skill-row"><span>Database / SQL</span><span>70%</span></div><div class="bar"><i data-fill="70"></i></div></div>
+        </div>
+        <div class="skill-col">
+          <h3 class="skill-cat">Management</h3>
+          <div class="skill"><div class="skill-row"><span>Project Management</span><span>85%</span></div><div class="bar"><i data-fill="85"></i></div></div>
+          <div class="skill"><div class="skill-row"><span>Procurement &amp; Budgeting</span><span>80%</span></div><div class="bar"><i data-fill="80"></i></div></div>
+          <div class="skill"><div class="skill-row"><span>SDG &amp; Green Office Reporting</span><span>75%</span></div><div class="bar"><i data-fill="75"></i></div></div>
+        </div>
+      </div>
+
+      <p class="skills-note">
+        <em>Tip: ระดับเปอร์เซ็นต์เป็นค่าประมาณการ ผมตั้งค่าเริ่มต้นไว้จากประสบการณ์ที่ระบุใน CV — คุณแก้ตัวเลขใน <code>index.html</code> ส่วน Skills ได้เลย</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Awards ===== -->
+  <section id="awards" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">07 — Awards</span>
+        <h2>Recognition</h2>
+      </div>
+
+      <div class="award-list">
+        <article class="award">
+          <div class="award-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>
+          </div>
+          <div class="award-body">
+            <span class="award-year">2024</span>
+            <h3>Outstanding Paper Award</h3>
+            <p class="award-meta">International Conference, Indonesia</p>
+            <p>For <em>"Design Concept of Data Visualization in Developing a Supervision System for Pre-Service Engineering Teachers"</em> — co-authored with Kanitta Hinon and Phuchit Satitpong.</p>
+          </div>
+        </article>
+
+        <article class="award award-grant">
+          <div class="award-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg>
+          </div>
+          <div class="award-body">
+            <span class="award-year">2020</span>
+            <h3>Research Funding — Support-Staff Researcher Scheme</h3>
+            <p class="award-meta">Faculty of Technical Education, KMUTNB · FY 2020</p>
+            <p>Project: <em>Controller of Electrical Energy in The Building</em>.</p>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- ===== Contact ===== -->
   <section id="contact" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <div class="two-column">
-        <div>
-          <p>
-            หากต้องการติดต่อเรื่องความร่วมมือวิจัย การสอน หรือการบรรยาย สามารถติดต่อได้ที่:
-          </p>
-          <ul class="list">
-            <li><strong>Email:</strong> kittinan.p@fte.kmutnb.ac.th</li>
-            <li><strong>Office:</strong> Faculty of Technical Education, KMUTNB</li>
-          </ul>
+      <div class="section-head">
+        <span class="eyebrow">08 — Contact</span>
+        <h2>Let's Work Together</h2>
+        <p class="section-desc">Open to research collaborations, guest lectures, and consulting on automation &amp; smart-campus projects.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:kittinan.p@fte.kmutnb.ac.th">
+          <div class="cc-icon cc-cyan"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div>
+          <div>
+            <div class="cc-label">Email</div>
+            <div class="cc-val">kittinan.p@fte.kmutnb.ac.th</div>
+          </div>
+        </a>
+
+        <div class="contact-card">
+          <div class="cc-icon cc-amber"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14"/></svg></div>
+          <div>
+            <div class="cc-label">Office</div>
+            <div class="cc-val">Faculty of Technical Education, KMUTNB</div>
+          </div>
         </div>
-        <div>
-          <h3 class="sub-title">Academic Profiles</h3>
-          <ul class="list">
-            <li><a href="#" target="_blank">Google Scholar</a></li>
-            <li><a href="#" target="_blank">ORCID</a></li>
-            <li><a href="#" target="_blank">ResearchGate</a></li>
-            <li><a href="#" target="_blank">LinkedIn</a></li>
-          </ul>
-        </div>
+
+        <a class="contact-card" href="https://scholar.google.com/citations?view_op=list_works&hl=th&user=2wEVpBUAAAAJ" target="_blank" rel="noopener">
+          <div class="cc-icon cc-violet"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+          <div>
+            <div class="cc-label">Google Scholar</div>
+            <div class="cc-val">View publications</div>
+          </div>
+        </a>
+
+        <a class="contact-card" href="https://orcid.org/0009-0004-7938-1447" target="_blank" rel="noopener">
+          <div class="cc-icon cc-emerald"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9 9v8M9 6v.01M12 12v5M15 12c0-1.7-1.3-3-3-3"/></svg></div>
+          <div>
+            <div class="cc-label">ORCID</div>
+            <div class="cc-val">0009-0004-7938-1447</div>
+          </div>
+        </a>
+
+        <a class="contact-card" href="https://www.scopus.com/authid/detail.uri?authorId=60021685900" target="_blank" rel="noopener">
+          <div class="cc-icon cc-rose"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+          <div>
+            <div class="cc-label">Scopus</div>
+            <div class="cc-val">Author ID 60021685900</div>
+          </div>
+        </a>
+
+        <a class="contact-card" href="https://research.kmutnb.ac.th/manage/researcher/?data=eyJjbWQiOiJzaG93X2luZm8iLCJyZXNfaWQiOjY0ODJ9" target="_blank" rel="noopener">
+          <div class="cc-icon cc-indigo"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+          <div>
+            <div class="cc-label">KMUTNB Research</div>
+            <div class="cc-val">Researcher profile</div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- ===== Footer ===== -->
   <footer class="site-footer">
-    <div class="container footer-container">
-      <p>© <span id="year"></span> Kittinan. All rights reserved.</p>
-      <p class="footer-note">Personal academic website for publications and research portfolio.</p>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo logo-foot">
+          <span class="logo-mark">KP</span>
+          <span class="logo-text">Kittinan Petsri</span>
+        </div>
+        <p class="footer-tag">Researcher · Engineer · Lifelong Tinkerer</p>
+      </div>
+      <div class="footer-meta">
+        <p>© <span id="year"></span> Kittinan Petsri. All rights reserved.</p>
+        <p class="muted">Built with HTML, CSS, and a little ♥ — last updated <span id="updated"></span></p>
+      </div>
     </div>
   </footer>
 
+  <!-- ===== Scripts ===== -->
   <script>
-    // ใส่ปีอัตโนมัติใน footer
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // Year + last updated
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('updated').textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+
+    // Dark mode toggle (persists in localStorage)
+    const themeBtn = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      root.classList.add('dark');
+    }
+    themeBtn.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    // Mobile nav
+    const navToggle = document.getElementById('navToggle');
+    const nav = document.getElementById('primary-nav');
+    navToggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
+    nav.addEventListener('click', e => {
+      if (e.target.tagName === 'A') nav.classList.remove('open');
+    });
+
+    // Animate skill bars when visible
+    const bars = document.querySelectorAll('.bar i');
+    const barObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.width = e.target.dataset.fill + '%';
+          barObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    bars.forEach(b => barObserver.observe(b));
+
+    // Count-up stats
+    const stats = document.querySelectorAll('.stat-num');
+    const statObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          const target = +el.dataset.count;
+          let cur = 0;
+          const step = Math.max(1, Math.ceil(target / 40));
+          const t = setInterval(() => {
+            cur += step;
+            if (cur >= target) { cur = target; clearInterval(t); }
+            el.textContent = cur;
+          }, 30);
+          statObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    stats.forEach(s => statObserver.observe(s));
+
+    // Reveal-on-scroll
+    const revealEls = document.querySelectorAll('.section, .timeline .t-item, .card, .proj, .award, .contact-card');
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObs.observe(el));
   </script>
 </body>
 </html>
-
-
