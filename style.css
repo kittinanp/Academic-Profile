@@ -678,6 +678,243 @@ html.dark .theme-toggle .icon-moon { display: block; }
 .proj-body p  { margin: 0 0 0.9rem; color: var(--text-soft); font-size: 0.93rem; }
 .proj-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 
+/* ===== Project subsections (Research / Consulting) ===== */
+.proj-subh {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem;
+  color: var(--text);
+}
+.proj-subh + .proj-sub-desc { margin-top: 0; }
+.proj-grid + .proj-subh { margin-top: 3.5rem; }
+.proj-subh-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--grad-primary);
+  box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.15);
+}
+.proj-subh-dot-c {
+  background: linear-gradient(135deg, var(--amber), var(--rose));
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.18);
+}
+.proj-sub-desc {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  margin: 0 0 1.5rem;
+  max-width: 720px;
+}
+
+/* Consulting chip - amber/rose accent */
+.chip-consult {
+  background: linear-gradient(135deg, rgba(245,158,11,.16), rgba(239,68,68,.16));
+  color: var(--amber);
+  font-weight: 700;
+}
+html.dark .chip-consult { color: #fbbf24; }
+
+/* Consulting card art - distinct gradient backgrounds */
+.proj-art-c1 { background: linear-gradient(135deg, #dbeafe 0%, #ede9fe 100%); }
+.proj-art-c2 { background: linear-gradient(135deg, #fee2e2 0%, #fed7aa 100%); }
+.proj-art-c3 { background: linear-gradient(135deg, #d1fae5 0%, #cffafe 100%); }
+.proj-art-c4 { background: linear-gradient(135deg, #ede9fe 0%, #fce7f3 100%); }
+.proj-art-c5 { background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); }
+.proj-art-c6 { background: linear-gradient(135deg, #cffafe 0%, #a5f3fc 100%); }
+
+html.dark .proj-art-c1 { background: linear-gradient(135deg, #1e293b 0%, #312e81 100%); }
+html.dark .proj-art-c2 { background: linear-gradient(135deg, #3f1d1d 0%, #422006 100%); }
+html.dark .proj-art-c3 { background: linear-gradient(135deg, #064e3b 0%, #164e63 100%); }
+html.dark .proj-art-c4 { background: linear-gradient(135deg, #2e1065 0%, #500724 100%); }
+html.dark .proj-art-c5 { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); }
+html.dark .proj-art-c6 { background: linear-gradient(135deg, #083344 0%, #155e75 100%); }
+
+/* Placeholder description (muted italic until user fills it in) */
+.muted-desc {
+  color: var(--text-muted) !important;
+  font-style: italic;
+  font-size: 0.92rem !important;
+}
+
+/* Thai subtitle under English machine title */
+.th-sub {
+  display: block;
+  font-family: var(--font-th);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+  letter-spacing: 0.01em;
+}
+
+/* Thai accent in About section */
+.th-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-th);
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  background: var(--border-soft);
+  padding: 0.55rem 1rem;
+  border-radius: var(--r-full);
+  margin-top: 1rem !important;
+  border: 1px solid var(--border);
+}
+.th-flag { font-size: 1.05rem; line-height: 1; }
+
+/* Consulting card "Consulting" ribbon on art */
+.proj-consult .proj-art { position: relative; }
+.proj-consult .proj-art::after {
+  content: 'Consulting';
+  position: absolute;
+  top: 10px; right: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--amber);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--r-full);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  z-index: 2;
+}
+html.dark .proj-consult .proj-art::after {
+  background: rgba(15, 20, 40, 0.85);
+  color: #fbbf24;
+}
+
+/* Photo-based art (replaces SVG illustration with real machine photo) */
+.proj-art-photo {
+  height: 220px;
+  background: #0f172a;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+.proj-art-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(.2,.8,.2,1), opacity 0.3s ease;
+}
+.proj-consult:hover .proj-art-photo img {
+  transform: scale(1.06);
+}
+
+/* Thumbnail dots for cards with multiple images */
+.proj-thumbs {
+  position: absolute;
+  bottom: 10px; left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  z-index: 2;
+  pointer-events: none;
+}
+.proj-thumbs button {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  padding: 0; margin: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background 0.2s, transform 0.15s, width 0.2s;
+}
+.proj-thumbs button:hover { transform: scale(1.3); }
+.proj-thumbs button.active {
+  background: var(--amber);
+  width: 22px;
+  border-radius: 4px;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Image counter badge */
+.proj-img-count {
+  position: absolute;
+  bottom: 10px; right: 10px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--r-full);
+  z-index: 2;
+  backdrop-filter: blur(4px);
+  display: flex; align-items: center; gap: 4px;
+}
+.proj-img-count::before {
+  content: '';
+  width: 10px; height: 10px;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><rect x='3' y='5' width='18' height='14' rx='2'/><circle cx='9' cy='11' r='2'/><path d='M21 17l-5-5-9 9'/></svg>") center/contain no-repeat;
+          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><rect x='3' y='5' width='18' height='14' rx='2'/><circle cx='9' cy='11' r='2'/><path d='M21 17l-5-5-9 9'/></svg>") center/contain no-repeat;
+}
+
+/* Lightbox modal for full-size view */
+.lightbox {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  cursor: zoom-out;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 95vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.lightbox-close {
+  position: absolute;
+  top: 1.2rem; right: 1.5rem;
+  background: rgba(255,255,255,0.15);
+  border: 0;
+  color: #fff;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: grid; place-items: center;
+  backdrop-filter: blur(4px);
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.25); }
+.lightbox-nav {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.15);
+  border: 0;
+  color: #fff;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: grid; place-items: center;
+  backdrop-filter: blur(4px);
+}
+.lightbox-nav:hover { background: rgba(255,255,255,0.25); }
+.lightbox-prev { left: 1.5rem; }
+.lightbox-next { right: 1.5rem; }
+.lightbox-caption {
+  position: absolute;
+  bottom: 1.5rem; left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  background: rgba(0,0,0,0.4);
+  padding: 0.5rem 1rem;
+  border-radius: var(--r-full);
+}
+
 /* ===== Skills ===== */
 .skills-grid {
   display: grid;
